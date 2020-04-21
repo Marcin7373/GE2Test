@@ -323,7 +323,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1dfdbcb04106bc2439e6f84aa8f83d9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  radius: 9
+  radius: 10
   lightNum: 10
   trafficLight: {fileID: 1074723283080310974, guid: 470a54ed6d67c7343ad937000dbc63c8,
     type: 3}
