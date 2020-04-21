@@ -9,7 +9,7 @@ public class TrafficLightSwitching : MonoBehaviour
 
     void Start()
     {
-        state = Random.Range(0,2);
+        state = Random.Range(0,3); // for int max = exclusive so < 3, for float max = inclusive
         StartCoroutine(LightDelay());
     }
 
@@ -20,20 +20,22 @@ public class TrafficLightSwitching : MonoBehaviour
             if (state == 0)
             {
                 GetComponent<Renderer>().material.color = Color.green;
+                gameObject.tag = "GreenLight";
+                state = 1;
                 yield return new WaitForSeconds(Random.Range(5.0f, 10.0f));
-                state = 1;           
             }
             else if (state == 1)
             {
                 GetComponent<Renderer>().material.color = Color.yellow;
-                yield return new WaitForSeconds(4);
-                state = 2;          
+                gameObject.tag = "NotGreenLight";
+                state = 2;
+                yield return new WaitForSeconds(4);   
             }
             else if (state == 2)
             {
                 GetComponent<Renderer>().material.color = Color.red;
-                yield return new WaitForSeconds(Random.Range(5.0f,10.0f));
-                state = 0;        
+                state = 0;
+                yield return new WaitForSeconds(Random.Range(5.0f, 10.0f));        
             }
         }
     }
