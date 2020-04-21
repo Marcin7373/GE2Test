@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class LightsSpawn : MonoBehaviour
 {
-    public float radius = 9;
+    public float radius = 10;
     public int lightNum = 10;
     private float angle = 0, height;
     private Vector3[] waypoints;
