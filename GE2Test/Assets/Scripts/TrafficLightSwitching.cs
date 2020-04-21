@@ -34,6 +34,7 @@ public class TrafficLightSwitching : MonoBehaviour
             else if (state == 2)
             {
                 GetComponent<Renderer>().material.color = Color.red;
+                gameObject.tag = "NotGreenLight";
                 state = 0;
                 yield return new WaitForSeconds(Random.Range(5.0f, 10.0f));        
             }

@@ -124,10 +124,10 @@ MonoBehaviour:
   force: {x: 0, y: 0, z: 0}
   acceleration: {x: 0, y: 0, z: 0}
   velocity: {x: 0, y: 0, z: 0}
-  mass: 1
-  damping: 0.01
-  banking: 0.1
-  maxSpeed: 10
+  mass: 0.5
+  damping: 0.72
+  banking: 0
+  maxSpeed: 6
   maxForce: 10
 --- !u!114 &4639577851263337021
 MonoBehaviour:
@@ -145,7 +145,7 @@ MonoBehaviour:
   force: {x: 0, y: 0, z: 0}
   boid: {fileID: 0}
   targetPosition: {x: 0, y: 0, z: 0}
-  slowingDistance: 15
+  slowingDistance: 5
   targetGameObject: {fileID: 0}
 --- !u!114 &-7130405939575226856
 MonoBehaviour:
@@ -159,5 +159,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23cd2e4e14621ab41a6a01a266fc2e2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tLights: []
   lightTarget: {fileID: 0}
